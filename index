@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Finder - 找尋適合你的瑜伽館</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #5c7f67;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('https://via.placeholder.com/1920x400');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .hero button {
+            background-color: #5c7f67;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .hero button:hover {
+            background-color: #48624e;
+        }
+
+        /* Main Section */
+        .main-section {
+            padding: 20px;
+        }
+
+        .studio-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .studio-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .studio-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .studio-card .content {
+            padding: 15px;
+        }
+
+        .studio-card h3 {
+            font-size: 18px;
+            margin: 0 0 10px;
+        }
+
+        .studio-card p {
+            font-size: 14px;
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .studio-card .price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #5c7f67;
+        }
+
+        footer {
+            background-color: #5c7f67;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Yoga Finder</h1>
+        <nav>
+            <a href="#">首頁</a>
+            <a href="#">關於我們</a>
+            <a href="#">地圖搜尋</a>
+            <a href="#">線上課程</a>
+            <a href="#">瑜伽生活誌</a>
+            <a href="#">新增Studio</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>找尋適合你的瑜伽館</h2>
+        <p>按照你的需要、地點，發掘最適合你的瑜伽館或老師</p>
+        <button onclick="alert('搜尋功能尚未完成')">立即搜尋</button>
+    </section>
+
+    <!-- Main Section -->
+    <main class="main-section">
+        <h2>發掘你最喜愛的Studio</h2>
+        <div class="studio-list">
+            <!-- Studio Card -->
+            <div class="studio-card">
+                <img src="https://via.placeholder.com/300x200" alt="Studio Image">
+                <div class="content">
+                    <h3>One Yoga Studio-灣仔</h3>
+                    <p>灣仔, 香港島</p>
+                    <p>瑜珈輪, 地面瑜珈, 頌缽</p>
+                    <p class="price">$101-150</p>
+                </div>
+            </div>
+
+            <!-- Studio Card -->
+            <div class="studio-card">
+                <img src="https://via.placeholder.com/300x200" alt="Studio Image">
+                <div class="content">
+                    <h3>One Yoga-北角</h3>
+                    <p>北角, 香港島</p>
+                    <p>空中瑜珈, 瑜珈輪, 地面瑜珈</p>
+                    <p class="price">$101-150</p>
+                </div>
+            </div>
+
+            <!-- Studio Card -->
+            <div class="studio-card">
+                <img src="https://via.placeholder.com/300x200" alt="Studio Image">
+                <div class="content">
+                    <h3>Unicorn Studio HK - 荔枝角</h3>
+                    <p>九龍, 荔枝角</p>
+                    <p>地面瑜珈, 空中瑜珈, 孕婦瑜珈, 瑜珈輪</p>
+                    <p class="price">$101-150</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Yoga Finder. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
