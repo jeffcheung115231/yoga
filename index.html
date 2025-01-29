@@ -1,204 +1,246 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-Hant" prefix="og: https://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yoga Finder - 找尋適合你的瑜伽館</title>
-    <style>
-        /* Global Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #f9f9f9;
-        }
-
-        header {
-            background-color: #5c7f67;
-            color: white;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header h1 {
-            font-size: 20px;
-            margin: 0;
-        }
-
-        nav {
-            display: flex;
-            gap: 15px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Hero Section */
-        .hero {
-            background-image: url('https://via.placeholder.com/1920x400');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
-
-        .hero h2 {
-            font-size: 36px;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-
-        .hero button {
-            background-color: #5c7f67;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .hero button:hover {
-            background-color: #48624e;
-        }
-
-        /* Main Section */
-        .main-section {
-            padding: 20px;
-        }
-
-        .studio-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .studio-card {
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .studio-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .studio-card .content {
-            padding: 15px;
-        }
-
-        .studio-card h3 {
-            font-size: 18px;
-            margin: 0 0 10px;
-        }
-
-        .studio-card p {
-            font-size: 14px;
-            margin: 5px 0;
-            color: #666;
-        }
-
-        .studio-card .price {
-            font-size: 16px;
-            font-weight: bold;
-            color: #5c7f67;
-        }
-
-        footer {
-            background-color: #5c7f67;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 14px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta -->
+    <title>Hello Yogis - 找尋適合你的瑜伽館</title>
+    <meta name="description" content="按照你的需要、地點、找尋最適合你的瑜伽館或老師。專注當下，帶你遇見生活的美好。香港、台北專業瑜伽場地與教師推薦平台。">
+    <meta name="keywords" content="瑜伽, 香港瑜伽, 台北瑜伽, 瑜伽老師, 瑜伽場地, 瑜伽課程">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://helloyogis.com/">
+    <meta property="og:title" content="Hello Yogis - 找尋適合你的瑜伽館">
+    <meta property="og:description" content="香港台北專業瑜伽場地與教師推薦平台">
+    <meta property="og:image" content="https://helloyogis.com/wp-content/uploads/2022/02/LOGO-10-1.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@hello_yogis">
+    
+    <!-- 預加載關鍵資源 -->
+    <link rel="preload" href="https://helloyogis.com/wp-content/themes/my-listing/assets/dist/frontend.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" as="style">
+    
+    <!-- 主要樣式表 -->
+    <link rel="stylesheet" href="https://helloyogis.com/wp-content/themes/my-listing/assets/dist/frontend.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
+    
+    <!-- Favicon 多平台支援 -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- 社群分享按鈕 -->
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFR4W0RTLZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MFR4W0RTLZ');
+    </script>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Hello Yogis",
+      "image": "https://helloyogis.com/wp-content/uploads/2022/02/LOGO-10-1.png",
+      "description": "香港台北專業瑜伽場地與教師推薦平台",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Hong Kong",
+        "addressRegion": "HK"
+      },
+      "telephone": "+852-1234-5678",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    }
+    </script>
 </head>
-<body>
-    <!-- Header -->
-    <header>
-        <h1>Yoga Finder</h1>
-        <nav>
-            <a href="#">首頁</a>
-            <a href="#">關於我們</a>
-            <a href="#">地圖搜尋</a>
-            <a href="#">線上課程</a>
-            <a href="#">瑜伽生活誌</a>
-            <a href="#">新增Studio</a>
+
+<body class="home-page">
+<div id="page-wrapper">
+    
+    <!-- 頁首導航 -->
+    <header class="main-header">
+        <nav class="navbar" aria-label="主要導航">
+            <div class="container">
+                <a href="/" class="brand-logo" aria-label="返回首頁">
+                    <img src="https://helloyogis.com/wp-content/uploads/2022/02/LOGO-10-1-300x144.png" 
+                         alt="Hello Yogis Logo" 
+                         width="200"
+                         height="86">
+                </a>
+                
+                <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="primary-menu">
+                    <span class="toggle-bar"></span>
+                    <span class="toggle-bar"></span>
+                    <span class="toggle-bar"></span>
+                </button>
+
+                <ul class="nav-menu" id="primary-menu" role="menubar">
+                    <li role="none"><a href="/explore/" role="menuitem">找尋瑜伽館</a></li>
+                    <li role="none"><a href="/teachers/" role="menuitem">專業教師</a></li>
+                    <li role="none"><a href="/blog/" role="menuitem">瑜伽知識</a></li>
+                    <li role="none"><a href="/about/" role="menuitem">關於我們</a></li>
+                    <li role="none"><a href="/contact/" role="menuitem">聯絡我們</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h2>找尋適合你的瑜伽館</h2>
-        <p>按照你的需要、地點，發掘最適合你的瑜伽館或老師</p>
-        <button onclick="alert('搜尋功能尚未完成')">立即搜尋</button>
-    </section>
-
-    <!-- Main Section -->
-    <main class="main-section">
-        <h2>發掘你最喜愛的Studio</h2>
-        <div class="studio-list">
-            <!-- Studio Card -->
-            <div class="studio-card">
-                <img src="https://via.placeholder.com/300x200" alt="Studio Image">
-                <div class="content">
-                    <h3>One Yoga Studio-灣仔</h3>
-                    <p>灣仔, 香港島</p>
-                    <p>瑜珈輪, 地面瑜珈, 頌缽</p>
-                    <p class="price">$101-150</p>
-                </div>
+    <!-- 主要內容 -->
+    <main id="main-content" class="content-area">
+        
+        <!-- 首頁橫幅 -->
+        <section class="hero-banner" aria-labelledby="main-heading">
+            <div class="banner-content">
+                <h1 id="main-heading">開啟你的瑜伽旅程</h1>
+                <p class="subhead">香港台北專業瑜伽場地與教師推薦平台</p>
+                
+                <!-- 搜尋表單 -->
+                <form class="studio-search-form" role="search" aria-label="瑜伽場地搜尋">
+                    <div class="form-group">
+                        <label for="location">地區</label>
+                        <select id="location" name="location">
+                            <option value="">選擇地區</option>
+                            <option value="hk">香港</option>
+                            <option value="tw">台北</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="style">瑜伽類型</label>
+                        <select id="style" name="style">
+                            <option value="">選擇類型</option>
+                            <option value="hatha">哈達瑜伽</option>
+                            <option value="vinyasa">流瑜伽</option>
+                            <option value="ashtanga">阿斯湯加</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="search-button">立即搜尋</button>
+                </form>
             </div>
+        </section>
 
-            <!-- Studio Card -->
-            <div class="studio-card">
-                <img src="https://via.placeholder.com/300x200" alt="Studio Image">
-                <div class="content">
-                    <h3>One Yoga-北角</h3>
-                    <p>北角, 香港島</p>
-                    <p>空中瑜珈, 瑜珈輪, 地面瑜珈</p>
-                    <p class="price">$101-150</p>
-                </div>
+        <!-- 特色推薦 -->
+        <section class="featured-studios" aria-labelledby="featured-heading">
+            <h2 id="featured-heading" class="section-heading">精選瑜伽場地</h2>
+            
+            <div class="studio-grid">
+                <!-- 場地卡片 -->
+                <article class="studio-card" itemscope itemtype="https://schema.org/YogaStudio">
+                    <img src="studio1.jpg" 
+                         alt="One Yoga Studio 環境照片" 
+                         itemprop="image"
+                         width="400"
+                         height="300">
+                    <div class="card-content">
+                        <h3 itemprop="name">One Yoga Studio</h3>
+                        <p class="location" itemprop="address">香港灣仔</p>
+                        <div class="rating" aria-label="評分4.5分">
+                            ★★★★☆
+                        </div>
+                        <a href="/studio/one-yoga" class="cta-button" aria-label="了解更多One Yoga Studio的資訊">
+                            查看詳情
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- 其他場地卡片... -->
             </div>
+        </section>
 
-            <!-- Studio Card -->
-            <div class="studio-card">
-                <img src="https://via.placeholder.com/300x200" alt="Studio Image">
-                <div class="content">
-                    <h3>Unicorn Studio HK - 荔枝角</h3>
-                    <p>九龍, 荔枝角</p>
-                    <p>地面瑜珈, 空中瑜珈, 孕婦瑜珈, 瑜珈輪</p>
-                    <p class="price">$101-150</p>
+        <!-- 最新文章 -->
+        <section class="latest-articles" aria-labelledby="articles-heading">
+            <h2 id="articles-heading" class="section-heading">最新瑜伽知識</h2>
+            
+            <div class="article-grid">
+                <article class="article-card">
+                    <img src="article1.jpg" 
+                         alt="初學瑜伽注意事項" 
+                         width="600"
+                         height="400">
+                    <div class="article-content">
+                        <h3>初學者必讀：瑜伽入門指南</h3>
+                        <p>2023年最新瑜伽基礎知識與準備要點...</p>
+                        <a href="/blog/yoga-basics" class="read-more">閱讀全文</a>
+                    </div>
+                </article>
+                
+                <!-- 其他文章卡片... -->
+            </div>
+        </section>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>關於我們</h4>
+                <nav aria-label="關於我們">
+                    <ul>
+                        <li><a href="/about">品牌故事</a></li>
+                        <li><a href="/contact">聯絡方式</a></li>
+                        <li><a href="/careers">加入我們</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="footer-section">
+                <h4>常見問題</h4>
+                <nav aria-label="常見問題">
+                    <ul>
+                        <li><a href="/faq">課程預約</a></li>
+                        <li><a href="/faq">費用說明</a></li>
+                        <li><a href="/faq">場地規範</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="footer-section">
+                <h4>追蹤我們</h4>
+                <div class="social-links" role="list">
+                    <a href="https://facebook.com" aria-label="Facebook" role="listitem">
+                        <img src="facebook-icon.svg" alt="Facebook">
+                    </a>
+                    <a href="https://instagram.com" aria-label="Instagram" role="listitem">
+                        <img src="instagram-icon.svg" alt="Instagram">
+                    </a>
                 </div>
             </div>
         </div>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Yoga Finder. All Rights Reserved.</p>
+        
+        <div class="copyright">
+            <p>© 2023 Hello Yogis 版權所有</p>
+            <nav aria-label="法務連結">
+                <a href="/privacy">隱私權政策</a>
+                <a href="/terms">使用條款</a>
+            </nav>
+        </div>
     </footer>
+</div>
+
+<!-- 主要腳本 -->
+<script defer src="https://helloyogis.com/wp-content/themes/my-listing/assets/dist/frontend.js"></script>
+<script defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+
 </body>
 </html>
